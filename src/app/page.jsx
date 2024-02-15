@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -11,25 +12,36 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl ">
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+        {/* IMAGE CONTAINER */}
+        <div className="h-1/2 lg:h-full lg:w-1/2 m-3 relative">
           <Image src="/hero.png" alt="" fill className="object-contain" />
         </div>
-        <div className="h-1/2 flex flex-col lg:h-full lg:w-1/2  gap-8 items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold ">
+        {/* TEXT CONTAINER */}
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+          {/* TITLE */}
+          <h1 className="text-4xl md:text-6xl font-bold">
             Crafting Digital Experiences, Designing Tomorrow.
           </h1>
+          {/* DESC */}
           <p className="md:text-xl">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
+            Welcome to my portfolio, a fusion of innovation and creativity.
+            Possessing a discerning eye for aesthetics and a mastery of code, my
+            collection of projects reflects a diverse range that underscores my
+            unwavering commitment to excellence.{" "}
           </p>
-          <div className="flex gap-4 w-full">
-            <button className="p-4 rounded-lg ring-1  ring-black bg-black text-white">
-              View my Work
+          {/* BUTTONS */}
+          <div className="w-full flex gap-4">
+            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+              View My Work
             </button>
-            <button className="p-4 rounded-lg ring-1  ring-black ">
-              Contact Me
-            </button>
+
+            <Link href="/contact">
+              {" "}
+              <button className="p-4 rounded-lg ring-1 ring-black">
+                Contact Me
+              </button>
+            </Link>
           </div>
         </div>
       </div>
