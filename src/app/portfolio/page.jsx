@@ -8,34 +8,53 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "Fullstack MERN Blog App",
-    desc: "A robust MERN stack blog website with comprehensive authentication features. Leveraging MongoDB, Express, React, and Node.js, this full-stack project seamlessly integrates creativity with functionality.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "",
+    title: "DailyPulse News",
+    desc: `A personalized AI powered news app using Next.js, React, and TypeScript.
+Secure authentication with Clerk.
+Personalized news fetching via NewsAPI.
+AI-powered article summarization with Gemini AI.
+Efficient data management with MongoDB and Mongoose.
+Responsive UI design with Tailwind CSS.`,
+    img: "/dailypulse.png",
+    link: "https://dailypulse.fosspage.com/",
+    code: "https://github.com/prathamdupare/dailypulse-news",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
     title: "FOSS-Prompts",
-    desc: "FossPrompts is an open-source AI prompting tool for modern world to discover, create and share creative AI prompts.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: `FossPrompts is an open-source AI prompting sharing tool for modern world to discover, create and share creative AI prompts.
+Developed using Next.js, Tailwind CSS, and MongoDB, featuring complete authentication functionality powered by NextAuth.js with Google authentication integration.`,
+    img: "/foss-prompts.png",
     link: "https://ai-prompt.fosspage.com/",
+    code: "https://github.com/prathamdupare/foss-prompt",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "REST API",
-    desc: "A REST API With Node, Express, TypeScript & MongoDB",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://github.com/prathamdupare/rest-api",
+    title: "Socials",
+    desc: `Profile creation and management with secure authentication via Clerk.
+Thread creation and nested comment system for engaging discussions.
+Real-time search functionality for efficient content discovery.
+Stylish UI design using Tailwind CSS, Type-safe codebase with TypeScript.
+Efficient database management with MongoDB and Mongoose.
+Robust form handling and image uploading capability with Zod and UploadThing.`,
+    img: "/socials.png",
+    link: "https://social.fosspage.com/",
+    code: "https://github.com/prathamdupare/x-twitter-clone",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "FossPage",
-    desc: "My blog site.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://blog.fosspage.com",
+    title: "Agency Site",
+    desc: `Full-stack agency website with authentication powered by Next-Auth.js.
+Pages include About, Contact, and a Blog section featuring agency-written articles.
+Utilized the Shadcn UI library for an aesthetically pleasing user interface.
+MongoDB used for efficient database management.
+Implemented authentication via traditional login/register methods or GitHub OAuth for streamlined access.`,
+    img: "/agency.png",
+    link: "https://agency.fosspage.com/",
+    code: "https://github.com/prathamdupare/nextjs-blog",
   },
 ];
 
@@ -68,17 +87,32 @@ const PortfolioPage = () => {
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
+                  <div className="w-full max-w-[500px] ">
+                    <div className="relative w-full aspect-w-16 aspect-h-9">
+                      <Image
+                        src={item.img}
+                        alt=""
+                        width={200}
+                        height={200}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
                   </div>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                      See Demo
-                    </button>
-                  </Link>
+                  <div className="flex gap-2">
+                    <Link href={item.code} className="flex justify-end">
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                        Code
+                      </button>
+                    </Link>
+                    <Link href={item.link} className="flex justify-end">
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                        See Demo
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
