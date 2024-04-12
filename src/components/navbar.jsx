@@ -12,6 +12,7 @@ const links = [
   { url: "/about", title: "About" },
   { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },
+  { url: "https://blog.fosspage.com", title: "Blog" },
 ];
 
 const Navbar = () => {
