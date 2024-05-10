@@ -32,9 +32,11 @@ const Homepage = () => {
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-              View My Work
-            </button>
+            <Link href="/contact">
+              <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+                View My Work
+              </button>
+            </Link>
 
             <Link href="/contact">
               {" "}
