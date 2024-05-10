@@ -7,6 +7,20 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
+    color: "from-blue-300 to-violet-300",
+    title: "CodeX",
+    desc: `Codex is an innovative online education platform designed to streamline the process of
+managing and enrolling in courses for both students and administrators.
+Developed using Next.js, GraphQL, , Hygraph CMS featuring complete authentication
+functionality powered by Clerk with Google authentication integration, Stripe for
+payments.`,
+    img: "/codex.png",
+    link: "https://codex.fosspage.com/",
+    code: "https://github.com/prathamdupare/codeX",
+  },
+
+  {
+    id: 2,
     color: "from-red-300 to-blue-300",
     title: "DailyPulse News",
     desc: `A personalized AI powered news app using Next.js, React, and TypeScript.
@@ -20,7 +34,7 @@ Responsive UI design with Tailwind CSS.`,
     code: "https://github.com/prathamdupare/dailypulse-news",
   },
   {
-    id: 2,
+    id: 3,
     color: "from-blue-300 to-violet-300",
     title: "FOSS-Prompts",
     desc: `FossPrompts is an open-source AI prompting sharing tool for modern world to discover, create and share creative AI prompts.
@@ -30,7 +44,7 @@ Developed using Next.js, Tailwind CSS, and MongoDB, featuring complete authentic
     code: "https://github.com/prathamdupare/foss-prompt",
   },
   {
-    id: 3,
+    id: 4,
     color: "from-violet-300 to-purple-300",
     title: "Socials",
     desc: `Profile creation and management with secure authentication via Clerk.
@@ -44,7 +58,7 @@ Robust form handling and image uploading capability with Zod and UploadThing.`,
     code: "https://github.com/prathamdupare/x-twitter-clone",
   },
   {
-    id: 4,
+    id: 5,
     color: "from-purple-300 to-red-300",
     title: "Agency Site",
     desc: `Full-stack agency website with authentication powered by Next-Auth.js.
@@ -92,8 +106,8 @@ const PortfolioPage = () => {
                       <Image
                         src={item.img}
                         alt=""
-                        width={200}
-                        height={200}
+                        width={500}
+                        height={500}
                         className="object-cover w-full h-full"
                       />
                     </div>
